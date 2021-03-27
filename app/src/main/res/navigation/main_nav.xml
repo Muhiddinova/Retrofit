@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/userFragment">
+
+
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.example.userretrofit.ui.user.UserFragment"
+        android:label="user_fragment"
+        tools:layout="@layout/user_fragment" >
+        <action
+            android:id="@+id/action_userFragment_to_postFragment"
+            app:destination="@id/postFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.userretrofit.ui.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/postFragment"
+        android:name="com.example.userretrofit.ui.userPosts.PostFragment"
+        android:label="post_fragment"
+        tools:layout="@layout/post_fragment" />
+    <fragment
+        android:id="@+id/postsFragment"
+        android:name="com.example.userretrofit.ui.posts.PostsFragment"
+        android:label="posts_fragment"
+        tools:layout="@layout/posts_fragment" />
+    <fragment
+        android:id="@+id/commentsFragment"
+        android:name="com.example.userretrofit.ui.comments.CommentsFragment"
+        android:label="CommentsFragment" />
+    <fragment
+        android:id="@+id/errorFragment"
+        android:name="com.example.userretrofit.ui.ErrorFragment"
+        android:label="ErrorFragment" />
+</navigation>
